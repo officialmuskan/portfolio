@@ -45,7 +45,7 @@ export default function Home(props){
               </div>
             
               
-                <img className='svg'  src='/src/assets/7083598-removebg-preview.png'/>
+                <img className='svg'  src='/assets/7083598-removebg-preview.png'/>
             
             </div>
             

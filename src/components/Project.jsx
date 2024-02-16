@@ -19,7 +19,7 @@ export default function Projects(props){
                         <div className="flip-card card-project mb-2" style={{width:"20rem", height:"26rem", backgroundColor: props.mode === 'dark'? '#222' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#222'}}>            
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                            <img src="/src/assets/Untitled design (11).png" class="card-img-top" alt="..." />
+                            <img src="/assets/Untitled design (11).png" class="card-img-top" alt="..." />
                                     <div className="card-body p-3 d-flex flex-column" style={{height: "5rem"}}>               
                                         <div className='d-flex flex-column'>
                                             <h5 class="card-title">Quiz App</h5>
@@ -45,7 +45,7 @@ export default function Projects(props){
                         <div className="flip-card card-project mb-2" style={{width:"20rem", height:"26rem", backgroundColor: props.mode === 'dark'? '#222' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#222'}}>            
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                            <img src="/src/assets/Untitled design (10).png" class="card-img-top" alt="..." />
+                            <img src="/assets/Untitled design (10).png" class="card-img-top" alt="..." />
                                     <div className="card-body p-3 d-flex flex-column" style={{height: "5rem"}}>               
                                         <div className='d-flex flex-column'>
                                             <h5 class="card-title">Weather Forecast</h5>
@@ -71,7 +71,7 @@ export default function Projects(props){
                         <div className="flip-card card-project mb-2" style={{width:"20rem", height:"26rem", backgroundColor: props.mode === 'dark'? '#222' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#222'}}>            
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                            <img src="/src/assets/Untitled design (12).png" class="card-img-top" alt="..." />
+                            <img src="/assets/Untitled design (12).png" class="card-img-top" alt="..." />
                                     <div className="card-body p-3 d-flex flex-column" style={{height: "5rem"}}>               
                                         <div className='d-flex flex-column'>
                                             <h5 class="card-title">Password Generator</h5>

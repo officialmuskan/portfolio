@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-
+// import img from '/assets/7083598-removebg-preview.png'
 
 export default function About(props){
     const [activeItem, setActiveItem] = useState(null);
@@ -46,7 +46,8 @@ export default function About(props){
                                 performance, I'm always up for a challenge.
                                 </p>
                         </div>
-                        <img width="400px" height="380px" src="/src/assets/7083598-removebg-preview.png" alt="" style={{borderRadius: "50%"}}/>   
+                        {/* <img src="/src/assets/7083598-removebg-preview.png" alt="" /> */}
+                        <img width="400px" height="380px" src="/assets/7083598-removebg-preview.png" alt="" style={{borderRadius: "50%"}}/>   
                     </div>
                     <div className='container-fluid d-flex flex-column justify-content-center flex-wrap' style={{ margin: "1vw 4.9vw"}}>
                     
