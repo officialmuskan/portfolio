@@ -19,7 +19,7 @@ export default function About(props){
     return(
       
         <>
-            <main style={{marginTop: "50px", backgroundColor: props.mode === 'dark'? '#111' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#212529'}}>
+            <main className='ok' style={{marginTop: "50px", backgroundColor: props.mode === 'dark'? '#111' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#212529'}}>
                 <div className="d-flex flex-row justify-content-center flex-wrap" style={{backgroundColor: props.mode === 'dark'? '#111' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#212529'}}>
 
                     <div className='container-fluid d-flex flex-row justify-content-evenly flex-wrap' style={{marginTop: "70px" ,marginRight: "1vw"}}> 

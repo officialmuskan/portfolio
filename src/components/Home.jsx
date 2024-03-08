@@ -19,7 +19,7 @@ export default function Home(props){
             <div className="d-flex flex-row justify-content-between
              flex-wrap
             " style={{backgroundColor: props.mode === 'dark'? '#111' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#212529'}}>
-              <div className="container d-flex flex-column" style={{marginTop: "9vw" }} >
+              <div className="container d-flex flex-column" style={{marginTop: "9vw", paddingRight:'0px', paddingLeft:'17px' }} >
                 <h3>Hello, </h3>
                 <h1 style={{fontSize: 'calc(2.5rem + 3vw)'}}>I'm Muskan</h1>
                 
@@ -46,7 +46,7 @@ export default function Home(props){
             
               </div>
             
-              <div className="d-flex" style={{marginLeft:'20px'}}>
+              <div className="d-flex" style={{marginLeft:'17px'}}>
                 <img className='svg' src='/assets/profile-pic.png'/>
                 </div>
             </div>
