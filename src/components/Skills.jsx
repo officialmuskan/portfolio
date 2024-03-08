@@ -15,7 +15,7 @@ export default function Skills(props){
             " style={{backgroundColor: props.mode === 'dark'? '#111' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#212529', marginTop: "100px" ,marginLeft: "6vw",marginRight: "4vw"}}>
             <div className="row">
             <div className="row mb-3">
-            <h1 style={{fontSize: 'calc(2rem)' , color:"#00dcd0", marginLeft:"8px"}}>My Skills</h1>
+            <p style={{fontSize: 'calc(2rem)' , color:"#00dcd0", textAlign:'center', fontWeight:'bold'}}>My Skills</p>
             </div>
             <div className="col-md-3 col-12 mb-3 d-flex justify-content-center">
                 <div className="card p-3 mb-2 d-flex justify-content-center" style={{height: "15rem", width:"15rem", backgroundColor: props.mode === 'dark'? '#222' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#222'}}>

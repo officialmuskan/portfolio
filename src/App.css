@@ -76,7 +76,7 @@ i{
   outline: none !important;
   background-color: #00dcd0;
   color: #fbfbfb;
-  margin-top: 2vw;
+  margin-top: 1vw;
   padding: 8px 13px;
   border-radius: 10px;
   font-size: 1rem;
@@ -288,8 +288,8 @@ textarea, #message {
 }
 
 #form-btn {
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
   margin-top: 3rem;
   border: none;
   color: white;
@@ -315,10 +315,19 @@ textarea, #message {
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  padding: 5rem;
+  padding: 5rem 5rem 5rem 3rem;
   /* background-color: rgba(0,0,0,0.3); */
 }
-
+@media (max-width: 767px) {
+  main {
+      margin-top: 0 !important;
+  }
+  .about-img{
+    width: 15rem;
+    height: 15rem;
+    order: -1;
+  }
+}
 .contact-info h3 {
   /* font-family: "Montserrat", sans-serif; */
   font-size: 1rem;

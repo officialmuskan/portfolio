@@ -40,6 +40,7 @@ function App(props) {
 
   return (
     <>
+    
     <BrowserRouter>
       <LoadingBar
           color='#00dcd0'
@@ -52,16 +53,16 @@ function App(props) {
         <Route exact path="/" element={
                   <Home mode={mode} />
                   }/>
-        <Route exact path="about/*"  element={
+        <Route  path="about/"  element={
                 <About mode={mode} setProgress={setProgress}/>
               }/>
-        <Route exact path="skills/*" element={
+        <Route  path="skills/" element={
                   <Skills mode={mode} />
                   }/>
-        <Route exact path="projects/*" element={
+        <Route  path="projects/" element={
                   <Project mode={mode} />
                   }/>
-        <Route exact path="contact/*" element={
+        <Route  path="contact/" element={
                   <Contact mode={mode} showAlert={showAlert} setProgress={setProgress}/>
                   }/>
             

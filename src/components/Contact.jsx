@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Typewriter from 'typewriter-effect'
-
+import Alert from '../components/Alert'
 import PropTypes from 'prop-types'
 
 
@@ -8,6 +8,23 @@ import PropTypes from 'prop-types'
 
 export default function Contact(props){
   const Mystyle={color: props.mode === 'dark'? '#fbfbfb' : '#222'}
+  const [alert, setAlert] = useState(null);
+  // const [aler, setAler] = useState(null);
+ 
+  const showAlert = (message, type,e)=>{
+    e.preventDefault();
+
+    
+  setAlert({ type: type, msg: message });
+  
+  setTimeout(() => {
+    setAlert(null);
+  }, 3000);
+  console.log(alert);
+ }
+ 
+ 
+  
     return(
       <>
         <main style={{marginTop: "90px", backgroundColor: props.mode === 'dark'? '#111' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#212529'}}>
@@ -17,26 +34,29 @@ export default function Contact(props){
                 <h1 className='text-start'  style={{fontSize: 'calc(1.5rem + 1vw)' , color:"#00dcd0", marginBottom: "40px"}}>Feel free to Contact Me</h1>
                             
                 </div>
+                <Alert alert={alert}/>
   
   <div class="contact-content" style={{background: props.mode === 'dark'? 'rgba(0,0,0,0.6)' : ''}}>
     <div class="contact-form">
       <h2 id="form-title" style={{color: props.mode === 'dark'? '#fbfbfb' : '#212529'}}>Send me a message</h2>
-    <form action="mailto:npeel3497@gmail.com" method="post" enctype="text/plain">
+    <form onSubmit={(e)=>showAlert("Message sent successfully!","dark",e)}>
       <fieldset>
         <div class="form-field" style={{color: props.mode === 'dark'? '#fbfbfb' : '#212529' , borderBottom: props.mode === 'dark'? '1px solid rgba(49, 234, 240, 0.092)' : '1px solid rgba(49, 234, 240, 0.8)'}}>
-          <input name="name" type="text" id="name" placeholder="Your Name" style={Mystyle} ></input>
+          <input name="name" type="text" id="name" placeholder="Your Name" style={Mystyle} required></input>
         </div>
       <div class="form-field" style={{color: props.mode === 'dark'? '#fbfbfb' : '#212529' , borderBottom: props.mode === 'dark'? '1px solid rgba(49, 234, 240, 0.092)' : '1px solid rgba(49, 234, 240, 0.8)'}}>
-          <input name="email" type="email" id="email" placeholder="Your Email" style={Mystyle}></input>
+          <input name="email" type="email" id="email" placeholder="Your Email" style={Mystyle} required></input>
         </div>
       <div class="form-field" style={{color: props.mode === 'dark'? '#fbfbfb' : '#212529' , borderBottom: props.mode === 'dark'? '1px solid rgba(49, 234, 240, 0.092)' : '1px solid rgba(49, 234, 240, 0.8)'}}>
-          <input name="Subject" type="text" id="subject" placeholder="Subject" style={Mystyle}></input>
+          <input name="Subject" type="text" id="subject" placeholder="Subject" style={Mystyle} required></input>
         </div>
     <div class="form-field" style={{color: props.mode === 'dark'? '#fbfbfb' : '#212529' , borderBottom: props.mode === 'dark'? '1px solid rgba(49, 234, 240, 0.092)' : '1px solid rgba(49, 234, 240, 0.8)'}}>
-          <textarea name="message" type="text" id="message" placeholder="Your Message" style={Mystyle}></textarea>
+          <textarea name="message" type="text" id="message" placeholder="Your Message" style={Mystyle} required></textarea>
         </div>
       </fieldset>
-  <input id="form-btn" type="submit" value="send" />
+      
+  <button id="form-btn" >Send</button>
+    
     </form>
 </div>
   
@@ -57,6 +77,10 @@ export default function Contact(props){
                 </div>
             
             </main>
+            
       </>
     )
   }
+  Contact.propTypes = {
+    mode: PropTypes.string.isRequired,
+};

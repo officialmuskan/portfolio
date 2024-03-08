@@ -4,7 +4,8 @@ import {  Link, useLocation } from "react-router-dom";
 
 export default function Navbar(props){
     let location = useLocation();
-    
+    const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
+
     
     React.useEffect(() => {
        
@@ -12,17 +13,20 @@ export default function Navbar(props){
         setTimeout(() =>{
             props.setProgress(0);
         }, 0.1);
+        setSidebarCollapsed(true)
         
       }, [location]);
     
-    
+      const toggleSidebar = () => {
+        setSidebarCollapsed(!sidebarCollapsed);
+      };
     
 
     return(
         <>
             <header>
             {/* <!-- Sidebar --> */}
-            <nav id="sidebarMenu" style={{backgroundColor: props.mode === 'dark'? 'black' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : 'black'}} className="collapse d-lg-block sidebar collapse">
+            <nav id="sidebarMenu" style={{backgroundColor: props.mode === 'dark'? 'black' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : 'black'}} className={`collapse d-lg-block sidebar ${sidebarCollapsed ? "collapse" : ""}`} data-bs-toggle="collapse">
                 <div className="position-sticky d-flex flex-column text-center align-items-center" style={{marginTop: "9vw"}}>    
                     <ul className="nav d-flex flex-column align-items-start ">
 
@@ -86,6 +90,7 @@ export default function Navbar(props){
                     <button
                             className="navbar-toggler"
                             type="button"
+                            onClick={toggleSidebar}
                             data-bs-toggle="collapse"
                             data-bs-target="#sidebarMenu"
                             aria-controls="sidebarMenu"
@@ -99,7 +104,7 @@ export default function Navbar(props){
                     <a className="navbar-brand" href="/">
                     <img
                         className="imagelogo"
-                        src="/src/assets/Screenshot_2023-09-25_230321-removebg-preview.png"
+                        src="/assets/Screenshot_2023-09-25_230321-removebg-preview.png"
                         height="60"
                         alt=""
                         loading="lazy"

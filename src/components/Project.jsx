@@ -8,12 +8,12 @@ export default function Projects(props){
   
     return(
       <>
-        <main style={{marginTop: "50px", backgroundColor: props.mode === 'dark'? '#111' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#222'}}>
-            <div className="d-flex flex-column justify-content-center flex-wrap" style={{backgroundColor: props.mode === 'dark'? '#111' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#212529', marginTop: "150px" ,marginLeft: "6vw",marginRight: "4vw"}}>
+        <main style={{marginTop: "40px", backgroundColor: props.mode === 'dark'? '#111' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#222'}}>
+            <div className="d-flex flex-column justify-content-center flex-wrap" style={{backgroundColor: props.mode === 'dark'? '#111' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#212529', marginTop: "100px" ,marginLeft: "6vw",marginRight: "4vw"}}>
                 <div className="row">
-                    <div className="row">
-                    <h1 style={{fontSize: 'calc(2rem)' , color:"#00dcd0", marginLeft: "19px"}}>My Projects</h1>
-                
+                    <div className="row mb-3">
+                    <p style={{fontSize: 'calc(2rem)' , color:"#00dcd0", textAlign:'center', fontWeight:'bold'}}>My Projects</p>
+            
                     </div>
                     <div className="col-md-4 col-12 mb-3 d-flex justify-content-evenly">
                         <div className="flip-card card-project mb-2" style={{width:"20rem", height:"26rem", backgroundColor: props.mode === 'dark'? '#222' : '#fbfbfb', color: props.mode === 'dark'? '#fbfbfb' : '#222'}}>            
